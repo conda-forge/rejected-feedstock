@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rejected-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/rejected-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/rejected-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rejected-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rejected-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rejected-feedstock/branch/master)
