@@ -1,4 +1,4 @@
-{% set version = "3.12.2" %}
+{% set version = "3.13.3" %}
 
 package:
   name: rejected
@@ -7,7 +7,7 @@ package:
 source:
   fn: rejected-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/r/rejected/rejected-{{ version }}.tar.gz
-  md5: 1bd216f95124a4a29f3722fe00d1f800
+  md5: 8e615ba9994f9f8813e6b004794e55ec
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
 
   run:
     - python
+    - setuptools
     - helper
     - pika >=0.10.0
     - psutil
