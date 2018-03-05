@@ -1,4 +1,4 @@
-{% set version = "3.13.3" %}
+{% set version = "3.19.5" %}
 
 package:
   name: rejected
@@ -7,7 +7,7 @@ package:
 source:
   fn: rejected-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/r/rejected/rejected-{{ version }}.tar.gz
-  md5: 8e615ba9994f9f8813e6b004794e55ec
+  md5: 2ddfe540c4f0242492bcc1658539dd0f
 
 build:
   number: 0
