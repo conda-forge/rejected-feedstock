@@ -8,9 +8,10 @@ osx_image: xcode6.4
 
 env:
   matrix:
-    
-    - CONDA_PY=27
-    - CONDA_PY=35
+    - CONFIG=osx_python2.7
+    - CONFIG=osx_python3.5
+    - CONFIG=osx_python3.6
+
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "IrozpGxcbzUfoMw3lnJ44DyiE86aSg14OKcVXDnaw4w8j/So0lLpXgX4ppTPI3gazRYOu7w9TGWq211q38WpOx/k01taaQO3xbQOh9I6tkxBrL5xIsgUkt6zclOoQTurYsyXDBcFzOngVrAu0WJ4wbCcwm/KDo53qiGvVNVs4HrM9CrX805CUDje8uxjS+BT5QUPtm1oN83JEkU/GFlEZL1encZsUHZiIK7J5zbrsIiUMLJoApXhYfBGR+JRum7xr5FXeeqMPWXY3Vw93KMfr8qK1XlxpW+xuiVrJoTS7pWODBL77jdMO+kuHrQZmoUSLgH6rbTDDxibRKw7dJD/ZMfEMWd/IoMrvgMFXaxNQKTNYEUsKKdTiEf3h3A3EhNqW+KBXMTk1bVxjthXPq04dB18hLjT19gNktNgSIJ443S0a0Q56ZaGHGv6XOHSLOf+IfvfJ4ilS3RZEWxc2Wjsc9zhf/2IiFLVKlHRgIzecQxl1cDmzeJudIljg3j2g6zI8izU8WDIl1XErsuw6HTR5UqE/T5oIEG1GPqBbUuoiTE8TVrof3ktkPCTI3LBj33F2NOe9nDeskbNYUmuit6gziJGZeXdWYn/8C5Hj3/+91wj5mz+bkA90f5gEbi82/79gMAPKURLhEdEXLYZrMFc1HY5YlAbkN2E4Td40L1N4vs="
@@ -19,7 +20,7 @@ env:
 before_install:
     # Fast finish the PR.
     - |
-      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
+      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
           python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
 
     # Remove homebrew.
@@ -51,10 +52,10 @@ install:
       conda config --add channels defaults
       conda config --add channels conda-forge
       conda config --set show_channel_urls true
-      conda install --yes --quiet conda-forge-build-setup
+      conda install --yes --quiet conda-forge-ci-setup=1
       source run_conda_forge_build_setup
 
 script:
-  - conda build ./recipe
+  - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-  - upload_or_check_non_existence ./recipe conda-forge --channel=main
+  - upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./.ci_support/${CONFIG}.yaml
