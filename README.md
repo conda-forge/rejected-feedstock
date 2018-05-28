@@ -14,9 +14,8 @@ Summary: An AMQP (RabbitMQ) consumer daemon and message processing framework
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/rejected-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/rejected-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/rejected-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/rejected-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/rejected-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/rejected-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/rejected-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/rejected-feedstock)
 
 Current release info
 ====================
