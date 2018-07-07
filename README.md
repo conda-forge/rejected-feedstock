@@ -14,14 +14,15 @@ Summary: An AMQP (RabbitMQ) consumer daemon and message processing framework
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rejected-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rejected-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/rejected-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rejected-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rejected-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rejected-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/rejected-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/rejected-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/rejected/badges/version.svg)](https://anaconda.org/conda-forge/rejected)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/rejected/badges/downloads.svg)](https://anaconda.org/conda-forge/rejected)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-rejected-green.svg)](https://anaconda.org/conda-forge/rejected) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/rejected.svg)](https://anaconda.org/conda-forge/rejected) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/rejected.svg)](https://anaconda.org/conda-forge/rejected) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/rejected.svg)](https://anaconda.org/conda-forge/rejected) |
 
 Installing rejected
 ===================
