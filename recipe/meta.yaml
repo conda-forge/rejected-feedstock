@@ -1,30 +1,25 @@
-{% set version = "3.19.9" %}
+{% set name = "rejected" %}
+{% set version = "3.19.14" %}
 
 package:
-  name: rejected
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: rejected-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/r/rejected/rejected-{{ version }}.tar.gz
-  md5: 61ed010ea30278d8cadbccabb4c4bc0b
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
+  sha256: 3002c4c79e181a0eec869a001c2c5cf7f7a59412cd0de821cb9ff713a827ec0b
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  script: python -m pip install --no-deps --ignore-installed . -vvv
   entry_points:
     - rejected = rejected.controller:main
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-    - helper
-    - pika >=0.10.0
-    - psutil
-    - pyyaml
-    - tornado >=4.2,<4.3
-
+    - pip
   run:
     - python
     - setuptools
@@ -32,7 +27,7 @@ requirements:
     - pika >=0.10.0
     - psutil
     - pyyaml
-    - tornado >=4.2,<4.3
+    - tornado >=4.2,<5
 
 test:
   imports:
@@ -47,3 +42,4 @@ about:
 
 extra:
   recipe-maintainers:
+    - xhochy
