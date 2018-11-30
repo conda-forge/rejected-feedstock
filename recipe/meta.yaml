@@ -1,5 +1,5 @@
 {% set name = "rejected" %}
-{% set version = "3.19.14" %}
+{% set version = "3.19.15" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
-  sha256: 3002c4c79e181a0eec869a001c2c5cf7f7a59412cd0de821cb9ff713a827ec0b
+  sha256: 86eb97c995edec84eb0629db06738f0a1f356f787d7d2c230ec27d3c8f617101
 
 build:
   number: 1000
