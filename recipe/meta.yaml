@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
   sha256: 86eb97c995edec84eb0629db06738f0a1f356f787d7d2c230ec27d3c8f617101
 
@@ -37,7 +36,8 @@ test:
 
 about:
   home: https://rejected.readthedocs.io
-  license: BSD 3-clause
+  license: BSD-3-Clause
+  license_file: LICENSE
   summary: An AMQP (RabbitMQ) consumer daemon and message processing framework
 
 extra:
