@@ -10,7 +10,7 @@ source:
   sha256: 86eb97c995edec84eb0629db06738f0a1f356f787d7d2c230ec27d3c8f617101
 
 build:
-  number: 1000
+  number: 1001
   script: python -m pip install --no-deps --ignore-installed . -vvv
   entry_points:
     - rejected = rejected.controller:main
