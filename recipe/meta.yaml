@@ -1,5 +1,5 @@
 {% set name = "rejected" %}
-{% set version = "3.19.15" %}
+{% set version = "3.20.9" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
-  sha256: 86eb97c995edec84eb0629db06738f0a1f356f787d7d2c230ec27d3c8f617101
+  sha256: f8cd2d882b2be3b42acf135a93188798c74ae904d7ba69b0f5fb1c420ddf21fd
 
 build:
-  number: 1001
+  number: 0
   script: python -m pip install --no-deps --ignore-installed . -vvv
   entry_points:
     - rejected = rejected.controller:main
