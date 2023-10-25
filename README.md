@@ -1,11 +1,11 @@
-About rejected
-==============
+About rejected-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rejected-feedstock/blob/main/LICENSE.txt)
 
 Home: https://rejected.readthedocs.io
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rejected-feedstock/blob/main/LICENSE.txt)
 
 Summary: An AMQP (RabbitMQ) consumer daemon and message processing framework
 
