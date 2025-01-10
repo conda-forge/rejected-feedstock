@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
   sha256: d56047a549037463b9a3a64e8c75a3f0e08c3209ece3a0ed53b8e4131b4d3678
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --no-deps --ignore-installed . -vvv
   entry_points:
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools
     - helper
     - pika >=0.10.0
@@ -30,6 +30,8 @@ requirements:
     - tornado >=4.2,<5
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - rejected
   commands:
