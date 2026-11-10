@@ -1,16 +1,16 @@
 {% set name = "rejected" %}
-{% set version = "3.23.1" %}
+{% set version = "3.23.2" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
-  sha256: d56047a549037463b9a3a64e8c75a3f0e08c3209ece3a0ed53b8e4131b4d3678
+  url: https://files.pythonhosted.org/packages/source/r/rejected/{{ name }}-{{ version }}.tar.gz
+  sha256: 20eb825265f57a69605fb1cb380f1eae8facdeadbfe46cafc4e9c46aeac0da7f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed . -vvv
   entry_points:
